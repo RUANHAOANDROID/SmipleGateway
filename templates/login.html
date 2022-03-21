@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/js/vue.js"></script>
+    <script src="/js/vue-resource.js"></script>
+    <script src="/js/vue-router.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>this is login page</p>
+<form>
+    Project: <input type="text" name="admin"><br>
+    SN: <input type="text" name="password">
+</form>
+
+<button type="button" onclick="app.login()">Click Me!</button>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        },
+        methods: {
+            login: function () {
+                this.$http.get('/ping').then(function (res) {
+                    window.location.replace("http://localhost:8088/page/config");
+                }, function () {
+                    alert("请求失败")
+                })
+            }
+        }
+    })
+
+    function toast() {
+        alert("haah")
+    }
+</script>
+</body>
+
+</html>
