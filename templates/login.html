@@ -23,7 +23,7 @@
         },
         methods: {
             login: function () {
-                this.$http.get('/ping').then(function (res) {
+                this.$http.get('/api/config').then(function (res) {
                     window.location.replace("http://localhost:8088/page/config");
                 }, function () {
                     alert("请求失败")
