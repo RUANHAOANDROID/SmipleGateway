@@ -1,6 +1,6 @@
 
 ### A simple gateway example,UDP to TCP to UDP flow with Go.  
-### 一个简单的网关示例，用GO实现UDP TCP流的转发示例。
+### 一个简单的网关示例，用GO实现UDP TCP流的转发，同时提供web serveice。
 
 GO非常适合做网关转发，能够打包成不同环境的二进制可执行文件，体积非常小性能出色。
 
